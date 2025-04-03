@@ -1,0 +1,11 @@
+[Unit]
+Description=Network LED Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/network-leds.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
